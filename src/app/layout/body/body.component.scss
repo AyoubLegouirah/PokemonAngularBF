@@ -1,0 +1,107 @@
+/* Layout Styling */
+.layout {
+  display: flex;
+  height: 90vh;
+  background-color: #f4f5f7;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Body Content */
+.body-content {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  /*
+  background-image: url(/assets/img/unnamed.png);
+
+   */
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+
+}
+
+/* Card Styling */
+.card {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.5;
+}
+
+.pokemon-image {
+  display: block;
+  margin: 1rem auto 0;
+  max-width: 100px;
+  border-radius: 50%;
+  border: 2px solid #eaeaea;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* List Container */
+.list-container {
+  flex: 1;
+  background-color: #e9f7f5;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.pokemon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 100%; /* Empêcher la liste de déborder */
+}
+
+.pokemon-item {
+  margin-bottom: 0.5rem;
+  display: flex; /* Pour aligner les noms et les images */
+  align-items: center; /* Centrer verticalement les éléments */
+  gap: 0.5rem; /* Espacement entre l'image et le nom */
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd; /* Ligne pour séparer les items */
+}
+
+.pokemon-name {
+  font-size: 1rem;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin: 0; /* Retirer les marges par défaut */
+}
+
+.pokemon-name:hover {
+  color: #0056b3;
+}
+
+.pokemon-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #eaeaea;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}

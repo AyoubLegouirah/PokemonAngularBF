@@ -1,0 +1,32 @@
+<div class="layout">
+  <div class="body-content">
+    <div *ngIf="pokeResult;" class="card">
+      <div *ngIf="pokeDetails" class="card-details">
+        <h2 class="card-title">Détails du Pokémon</h2>
+        <div class="card-content">
+          <p><strong>ID :</strong> {{ pokeDetails.id }}</p>
+          <p><strong>Nom :</strong> {{ pokeDetails.name }}</p>
+          <p><strong>Hauteur :</strong> {{ pokeDetails.height }}</p>
+          <p><strong>Poids :</strong> {{ pokeDetails.weight }}</p>
+          <p><strong>Types :</strong> {{ pokeDetails.types[0].type.name }}</p>
+          <img [src]="pokeDetails.sprites.front_default" class="pokemon-image" alt="{{ pokeDetails.name }}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-container">
+    <div *ngIf="pokeResult;">
+      <h1 class="list-title">Liste des Pokémon</h1>
+      <ul class="pokemon-list">
+        <li *ngFor="let pokemon of pokeResult.results" class="pokemon-item">
+          <img [src]="pokemon.icon" alt="{{ pokemon.name }}" class="pokemon-icon">
+          <h2
+            (click)="PokeDetailsAffiche(pokemon.url)"
+            class="pokemon-name">
+            {{ pokemon.name }}
+          </h2>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
